@@ -7,12 +7,12 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserService } from '../core/services/user.service';
-import { take } from 'rxjs/operators';
+import { take, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class NoAuthGuard implements CanActivate {
   constructor(private userService: UserService) {}
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -22,6 +22,9 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return this.userService.isAuthenticated.pipe(take(1));
+    return this.userService.isAuthenticated.pipe(
+      take(1),
+      map(isAuth => !isAuth)
+    );
   }
 }
