@@ -1,27 +1,33 @@
 # PostsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+Posts app is a simple application that enables users to publish posts, edit and delete them
 
-## Development server
+post consists of title, image and content
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+view front end live [here](https://maa-posts-app.herokuapp.com)
 
-## Code scaffolding
+credentials to test application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+email: a@test.com
 
-## Build
+password: 123456
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies
 
-## Running unit tests
+- Front End:
+  - Angular 8
+  - Angular Material
+- Backend:
+  - Node.js
+  - Express
+  - Mongoose
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## [Posts Backend Repo](https://github.com/mohamed-elattar/posts-backend)
 
-## Running end-to-end tests
+you can view backend repo [here](https://github.com/mohamed-elattar/posts-backend)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Inspiration
 
-## Further help
+I have developed this app after following [Angular & NodeJS - The MEAN Stack Guide](https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+then I refactored it to more modular approach and added the ability to store uploaded images to cloudinary cloud service instead of storing it in the server.

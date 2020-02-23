@@ -1,48 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {
-  MatToolbarModule,
-  MatInputModule,
-  MatCardModule,
-  MatButtonModule,
-  MatExpansionModule,
-  MatProgressSpinnerModule,
-  MatPaginatorModule
-} from '@angular/material';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { from } from 'rxjs';
-import { PostsCreateComponent } from './posts/posts-create/posts-create.component';
-import { PostsListComponent } from './posts/posts-list/posts-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ErrorComponent } from './error/error.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { PostsModule } from './posts/posts.module';
+import { AngularMaterialModule } from './angular-material.module';
+import { ShowAuthedDirective } from './show-authed.directive';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PostsCreateComponent,
-    PostsListComponent,
-    ErrorComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, ShowAuthedDirective],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
+    FormsModule,
     HttpClientModule,
+    AngularMaterialModule,
     AppRoutingModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatProgressSpinnerModule,
-    MatPaginatorModule
+    AuthModule
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}

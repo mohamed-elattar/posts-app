@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://maa-posts-app.herokuapp.com/api'
 };
