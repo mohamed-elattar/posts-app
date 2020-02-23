@@ -4,11 +4,11 @@ Posts app is a simple application that enables users to publish posts, edit and 
 
 post consists of title, image and content
 
-view front end live [here](https://maa-posts-app.herokuapp.com)
+view front end live [here](https://maa-posts-app.netlify.com/)
 
 credentials to test application
 
-email: a@test.com
+email: z@test.com
 
 password: 123456
 
